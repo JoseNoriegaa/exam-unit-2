@@ -28,7 +28,7 @@ func main() {
 		if len(userError) > 0 {
 			fmt.Println(userError)
 		}
-		fmt.Println("Select and option from the menu by enter its related number")
+		fmt.Println("Select an option from the menu by enter its related number")
 		fmt.Print("> ")
 		optStr, _ := reader.ReadString('\n')
 		optStr = strings.ToLower(optStr)
@@ -60,6 +60,7 @@ func main() {
 			for i := 0; i < 5; i++ {
 				idStr := strconv.Itoa(i)
 				data[i].UUID = idStr
+				data[i].Read()
 				data[i].ToString()
 			}
 			break
